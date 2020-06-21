@@ -1,0 +1,28 @@
+<template>
+
+<div id="confirmation_modal_activate" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Activate Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to activate this account?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+        <button type="button" class="btn btn-primary" id="activate__user_button">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</template>
+<script>
+
+export default {
+}
+</script>
