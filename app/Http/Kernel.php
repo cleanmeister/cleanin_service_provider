@@ -69,6 +69,7 @@ class Kernel extends HttpKernel
         'cleaner' => \App\Http\Middleware\CleanerMiddleware::class,
         'client' => \App\Http\Middleware\ClientMiddleware::class,
         'isDeactivated' => \App\Http\Middleware\isDeactivated::class,
+        'cors' => \App\Http\Middleware\Cors::class, 
     ];
 
     /**

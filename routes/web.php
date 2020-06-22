@@ -14,18 +14,18 @@
 Auth::viaRemember();
 Auth::routes(['verify' => true]);
 
-Route::get('/inactive', 'PageController@inactive');
-Route::post('vuelogin', 'Auth\LoginController@vuelogin');
-Route::post('registration', 'Auth\RegisterController@clientregistration');
-Route::get('/register/service_provider', 'PageController@spregistration');
-Route::post('/register/service_provider', 'Auth\RegisterController@spregistration');
-Route::get('/landing', 'PageController@landingpage');
+Route::get('/inactive', 'PageController@inactive')->middleware('cors');
+Route::post('vuelogin', 'Auth\LoginController@vuelogin')->middleware('cors');
+Route::post('registration', 'Auth\RegisterController@clientregistration')->middleware('cors');
+Route::get('/register/service_provider', 'PageController@spregistration')->middleware('cors');
+Route::post('/register/service_provider', 'Auth\RegisterController@spregistration')->middleware('cors');
+Route::get('/landing', 'PageController@landingpage')->middleware('cors');
 
 Route::get('/', function () {
 	return view('pages.landing');
 });
 
-Route::middleware(['auth', 'verified', 'isDeactivated'])->group(function () {
+Route::middleware(['auth', 'verified', 'isDeactivated', 'cors'])->group(function () {
 	/*Route::get('/', function () {
 	    return view('home');
 	});*/
