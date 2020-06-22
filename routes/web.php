@@ -23,7 +23,7 @@ Route::get('/landing', 'PageController@landingpage')->middleware('cors');
 
 Route::get('/', function () {
 	return view('pages.landing');
-});
+})->middleware('cors');
 
 Route::middleware(['auth', 'verified', 'isDeactivated', 'cors'])->group(function () {
 	/*Route::get('/', function () {

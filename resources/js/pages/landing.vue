@@ -23,9 +23,9 @@
                                 <a v-bind:href="base_url + '/page_profile'" class="dropdown-item">
                                     <i class="fas fa-user"></i> Profile
                                 </a>
-                                <a v-bind:href="base_url + '/page_change_password'" class="dropdown-item">
+                                <!-- <a v-bind:href="base_url + '/page_change_password'" class="dropdown-item">
                                     <i class="fas fa-lock"></i> Change Password
-                                </a>
+                                </a> -->
                                 <a class="dropdown-item" v-bind:href="logout_action" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt"></i> logout
                                 </a>
